@@ -1,0 +1,28 @@
+#error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+#error-page > h1 {
+  font-size: 6rem;
+}
+
+#error-page > h2 {
+  font-size: 3rem;
+}
+
+#error-page > p {
+  font-size: 1.4rem;
+}
+
+#error-page > a {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border: 5px solid #ffc83d;
+  font-size: 1.4rem;
+  color: #000;
+}
