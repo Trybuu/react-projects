@@ -3,10 +3,34 @@
 - Grayish Blue: hsl(233, 13%, 49%)
 - Dark Grayish Blue: hsl(232, 13%, 33%) */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 #pricing-component {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: calc(100vh - 4rem);
   min-width: 100%;
-  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(232, 13%, 33%);
   background-color: hsl(240, 78%, 98%);
   border-radius: 1rem;
+}
+
+.decoration-img {
+  position: absolute;
+  z-index: 0;
+  /* transform-origin: left bottom; */
+}
+
+.decoration-img.top {
+  top: 0;
+  right: 0;
+}
+
+.decoration-img.bottom {
+  left: 0;
+  bottom: 0;
 }

@@ -1,0 +1,33 @@
+.pricing-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-switch-btn {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  margin: 1rem;
+  overflow: hidden;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: none;
+  border-radius: 1rem;
+}
+
+.pricing-switch-btn .circle {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.pricing-switch-btn.active .circle {
+  left: calc(100% - 5px - 1.5rem);
+}
