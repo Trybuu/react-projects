@@ -1,0 +1,31 @@
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 10px hsl(233, 13%, 49%);
+  border-radius: 0.5rem;
+}
+
+.pricing-card:nth-child(2) {
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+@media only screen and (min-width: 1000px) {
+  .pricing-cards {
+    flex-direction: row;
+  }
+
+  .pricing-card {
+    margin: 0;
+  }
+}
