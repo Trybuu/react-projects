@@ -1,7 +1,15 @@
+.pricing-title {
+  z-index: 100;
+}
+
 .pricing-switch {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pricing-switch span {
+  z-index: 100;
 }
 
 .pricing-switch-btn {
@@ -14,6 +22,7 @@
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border: none;
   border-radius: 1rem;
+  z-index: 100;
 }
 
 .pricing-switch-btn .circle {

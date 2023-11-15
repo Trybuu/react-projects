@@ -11,7 +11,7 @@ const PRICES = [
     planName: 'Basic',
     price: {
       monthly: 19.99,
-      annuall: 199.99,
+      annually: 199.99,
     },
     storageGb: 500,
     users: 2,
@@ -19,25 +19,25 @@ const PRICES = [
     link: '#',
   },
   {
-    planName: 'Basic',
+    planName: 'Professional',
     price: {
-      monthly: 19.99,
-      annuall: 199.99,
+      monthly: 24.99,
+      annually: 249.99,
     },
-    storageGb: 500,
-    users: 2,
-    sendUpGb: 3,
+    storageGb: 1000,
+    users: 5,
+    sendUpGb: 10,
     link: '#',
   },
   {
-    planName: 'Basic',
+    planName: 'Master',
     price: {
-      monthly: 19.99,
-      annuall: 199.99,
+      monthly: 39.99,
+      annually: 399.99,
     },
-    storageGb: 500,
-    users: 2,
-    sendUpGb: 3,
+    storageGb: 2000,
+    users: 10,
+    sendUpGb: 20,
     link: '#',
   },
 ]
@@ -53,9 +53,11 @@ export default function PricingComponent() {
     <div id="pricing-component">
       <PricingSwitch onSetPricing={handlePricingSwitch} pricing={pricing} />
       <div className="pricing-cards">
-        <PricingCard />
-        <PricingCard />
-        <PricingCard />
+        {PRICES.map((plan) => {
+          return (
+            <PricingCard data={plan} pricing={pricing} key={plan.planName} />
+          )
+        })}
       </div>
       {/* // Images for decoration */}
       {/* // --------------------- */}
