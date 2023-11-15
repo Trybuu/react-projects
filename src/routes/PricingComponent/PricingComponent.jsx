@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import BackButton from '../../components/BackButton/BackButton'
+
 import PricingSwitch from './PricingSwitch/PricingSwitch'
 import PricingCard from './PricingCard/PricingCard'
 import bgBottom from '../../assets/pricing-component files/images/bg-bottom.svg'
@@ -50,27 +52,30 @@ export default function PricingComponent() {
   }
 
   return (
-    <div id="pricing-component">
-      <PricingSwitch onSetPricing={handlePricingSwitch} pricing={pricing} />
-      <div className="pricing-cards">
-        {PRICES.map((plan) => {
-          return (
-            <PricingCard data={plan} pricing={pricing} key={plan.planName} />
-          )
-        })}
+    <>
+      {/* <BackButton /> */}
+      <div id="pricing-component">
+        <PricingSwitch onSetPricing={handlePricingSwitch} pricing={pricing} />
+        <div className="pricing-cards">
+          {PRICES.map((plan) => {
+            return (
+              <PricingCard data={plan} pricing={pricing} key={plan.planName} />
+            )
+          })}
+        </div>
+        {/* // Images for decoration */}
+        {/* // --------------------- */}
+        <img
+          src={bgBottom}
+          alt="stripes - decoration"
+          className="decoration-img bottom"
+        />
+        <img
+          src={bgTop}
+          alt="stripes - decoration"
+          className="decoration-img top"
+        />
       </div>
-      {/* // Images for decoration */}
-      {/* // --------------------- */}
-      <img
-        src={bgBottom}
-        alt="stripes - decoration"
-        className="decoration-img bottom"
-      />
-      <img
-        src={bgTop}
-        alt="stripes - decoration"
-        className="decoration-img top"
-      />
-    </div>
+    </>
   )
 }
