@@ -6,6 +6,42 @@ import bgBottom from '../../assets/pricing-component files/images/bg-bottom.svg'
 import bgTop from '../../assets/pricing-component files/images/bg-top.svg'
 import './PricingComponent.css'
 
+const PRICES = [
+  {
+    planName: 'Basic',
+    price: {
+      monthly: 19.99,
+      annuall: 199.99,
+    },
+    storageGb: 500,
+    users: 2,
+    sendUpGb: 3,
+    link: '#',
+  },
+  {
+    planName: 'Basic',
+    price: {
+      monthly: 19.99,
+      annuall: 199.99,
+    },
+    storageGb: 500,
+    users: 2,
+    sendUpGb: 3,
+    link: '#',
+  },
+  {
+    planName: 'Basic',
+    price: {
+      monthly: 19.99,
+      annuall: 199.99,
+    },
+    storageGb: 500,
+    users: 2,
+    sendUpGb: 3,
+    link: '#',
+  },
+]
+
 export default function PricingComponent() {
   const [pricing, setPricing] = useState('Monthly')
 
